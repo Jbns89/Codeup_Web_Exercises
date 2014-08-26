@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Selectors Exercise</title>
+    <style>
+
+
+      #container {
+        margin: 50px auto;
+        width: 500px;
+        padding: 10px;
+      }
+/*
+      just regular descendents not direct 
+      descendents so no > is needed*/
+        #container h1.fancy-header {
+        color: green;
+        text-decoration: underline;
+        font-variant: small-caps;
+      }
+
+      em {
+        font-weight: bold;
+      }
+
+      .article {
+        clear:both;
+      }
+
+
+      .article>a {
+        float:right;
+        margin: 30px auto;
+        color: green;
+      }
+
+      body{
+        background-color: rgba(20, 20, 100, 10);
+        background-image: url(img/04threadless_image.jpg);
+        background-size: 800px 800px;
+      }
+      p{
+        text-indent: 30px;
+        color:black; 
+        font-family: Tahoma,;
+        background-color: rgba(20,20,100,.25);
+        font-size: 1em;
+        /*can use either ems or % as a unit for doing
+        font sizing, this is more user friendly*/
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <section class="article">
+        <h1 class="fancy-header">Heading One</h1>
+        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut <em>aliquip</em> ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="">Read More</a>
+      </section>
+      <section class="article">
+        <h1 class="fancy-header">Heading Two</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur <em>adipisicing</em> elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="">Read More</a>
+      </section>
+    </div>
+  </body>
+</html>
