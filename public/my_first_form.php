@@ -29,19 +29,19 @@ var_dump($_GET);
 	<h2>Compose an Email</h2>
 		<form method="POST">
 			<p>
-				<label for="To:"></label>
+				<label for="To:">To:</label>
         		<input id="To:" name="To:" type="email" placeholder="Who are you emailing?">
 			</p>
 			<p>
-				<label for="From:"></label>
+				<label for="From:">From:</label>
         		<input id="From:" name="From:" type="email" placeholder="Who is the email from?">
 			</p>
 			<p>
-				<label for="Subject"></label>
+				<label for="Subject">Subject:</label>
         		<input id="Subject" name="Subject" type="email" placeholder="Please enter subject">
 			</p>
 			<p>
-				<label for="Body"></label>
+				<label for="Body">Body:</label>
         		<textarea id="Body" name="Body" placeholder="Type Message Here"></textarea>
 			</p>
 				<label><input type="checkbox" id="subject" name="subject" value="yes" checked>Do you want to save a copy to sent folder?</label>
@@ -81,7 +81,7 @@ var_dump($_GET);
 				<option value="0">--Pick One--</option>
 				<option value="1">yes</option>
 				<option value="2">no</option>
-
+			</select>
 			<input type="submit" value="Submit" />
 
 		</form>
