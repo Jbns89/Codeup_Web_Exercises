@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Switch External JS</title>
+</head>
+<body>
+    <script>
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var color = colors[Math.floor(Math.random()*colors.length)];
+
+var favorite = 'green'; // todo, change this to your favorite color from the list
+var msg = (color==favorite) ? console.log("You matched my favorite color!") : console.log("");
+switch(color)
+{
+    case "red" :
+
+        console.log("Red is the color of the sky.");
+       break;
+
+    case "orange" :
+
+        console.log("Orange is the color of bananas.");
+        break;   
+
+    case "yellow": 
+
+        console.log("Yellow is the color of the grass.");
+        break;   
+
+    case "green": 
+
+        console.log("Green is the color of flamingos");    
+       break;
+
+    case "blue": 
+
+        console.log("Blue is the color of ducks.");
+        break;  
+
+    default:
+
+        console.log("I do not know anything by that color.");
+}
+console.log("<^><^><^><^><^><^><^><^><^>");
+console.log("I'm also color blind......");
+
+
+
+    </script>
+</body>
+</html>
