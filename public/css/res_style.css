@@ -2,11 +2,13 @@
 {
 	background-image: url(/img/subtle_green.jpg);
 }
+
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus 
 {
 color: #FDF8F8;
 background-color: rgb(0, 143, 255);
 }
+
 .navbar-default .navbar-nav>li>a 
 {
 	color: #005788;
@@ -14,6 +16,7 @@ background-color: rgb(0, 143, 255);
 	font-size: large;
 	font-weight: 800;
 }
+
 .navbar-brand-centered 
 {
     position: absolute;
@@ -23,6 +26,7 @@ background-color: rgb(0, 143, 255);
     text-align: center;
         
 }
+
 .navbar>.container .navbar-brand-centered, 
 .navbar>.container-fluid .navbar-brand-centered>a:hover 
 {
@@ -31,7 +35,9 @@ background-color: rgb(0, 143, 255);
     background-color: rgb(0, 143, 255);
     color: #FDF8F8;
 }
-.navbar-default .navbar-brand {
+
+.navbar-default .navbar-brand 
+{
 color: #1212F1;
 font-family: serif;
 font-size: xx-large;
@@ -41,4 +47,9 @@ font-weight: bolder;
 body
 {
 	background-color: #F0FDFF;
+}
+
+.contact-info
+{
+    
 }
