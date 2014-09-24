@@ -3,12 +3,11 @@
     <title>Delayed Autosave</title>
 </head>
 <body>
-
     <h2>Autosaving Text Input</h2>
     <textarea rows="10" cols="60" id="important"></textarea>
-
     <script>
         var timeoutId;
+        
         function save() 
         {
             alert('Saved!');
@@ -26,11 +25,8 @@
             //we don't want to call the function immediately
             timeoutId = setTimeout(save, delay);
         }
-
         var textarea = document.getElementById('important');
         textarea.addEventListener('keyup', autosave, false);
-
     </script>
-
 </body>
 </html>

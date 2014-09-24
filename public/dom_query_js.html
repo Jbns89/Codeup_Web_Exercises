@@ -3,11 +3,8 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
-
     <h1 id="main-header">Hello World!</h1> 
-    
     <button id="MainH1">Header</button>
-    
     <ul>
         <li data-dbid="1">Item 1</li>
         <li data-dbid="2">Item 2</li>
@@ -15,14 +12,9 @@
         <li data-dbid="4">Item 4</li>
         <li data-dbid="5">Item 5</li>
     </ul>
-    
     <button id="lists">List</button>
-    
-    
     <h2 id="sub-header">Hello Again.</h2> 
-    
     <button id="SubH2">SubHead</button>
-    
     <p class="sub-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -32,66 +24,42 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
         culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    
     <button id="par">Par.</button>
-    
     <script>
-        
         // todo: get the main header element by id
-        document.getElementById('MainH1').addEventListener('click', function()
-        {
+        document.getElementById('MainH1').addEventListener('click', function(){
             var mainHeader = document.getElementById("main-header");
             mainHeader.innerHTML = "JavaScript is the <em>bees knees!</em>";
             console.log(mainHeader.innerHTML);
         });
-        
-        
         // todo: set inner html of mainHeader to "JavaScript is Cool"
-
         // todo: get the sub header element by id
-        document.getElementById('SubH2').addEventListener('click', function()
-        {
+        document.getElementById('SubH2').addEventListener('click', function(){
             var subHeader = document.getElementById("sub-header");
             subHeader.style['color'] = 'blue';
             console.log(subHeader.style['color']);
         });
-        
-        
         // todo: set the text color of subHeader to blue
-        
         // todo: get all list items
-        
-        document.getElementById("lists").addEventListener('click', function()
-        {
+        document.getElementById("lists").addEventListener('click', function(){
             var listItems = document.getElementsByTagName('li');
-            for (var i = 0; i < listItems.length; i+=2) 
-            {
-                if (listItems[i].attributes['data-dbid'].value == 1) 
-                {
+            for (var i = 0; i < listItems.length; i+=2) {
+                if (listItems[i].attributes['data-dbid'].value == 1) {
                     listItems[i].style['color'] = 'blue';
                 } else {
-                    listItems[i].style['color']='grey';
+                    listItems[i].style['color'] = 'grey';
                 }
             }
         });
-        
-       
-
         // todo: set text color on every other list item to grey
         // todo: set text color of li with dbid = 1 to blue
-
         // todo: get all elements with class name sub-paragraph
-        document.getElementById("par").addEventListener('click', function()
-        {
+        document.getElementById("par").addEventListener('click', function(){
             var subParagraphs = document.getElementsByClassName('sub-paragraph');
-            subParagraphs[0].innerHTML="Mission Accomplished!";
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
             console.log(subParagraphs[0].innerHTML);
         });
-
-
         // todo: change the text in the first sub paragraph to "Mission Accomplished!"
-
     </script>
-
 </body>
 </html>
