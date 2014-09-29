@@ -6,8 +6,7 @@
     <script>
         $(document).ready(function()
         {
-            var contents = $('#hdng');
-            alert(contents);
+            $('.awful').css('border', '1px dashed red');
         });
     </script>
 </head>
@@ -15,17 +14,17 @@
     <div>
         <h1 id="hdng" >This should be visible as you see the alert</h1>
             <p class="para" >These are the downfalls of doctor who yet I still love it.</p>
-            <li>
-                <ul class="awful">
+            <ul>
+                <li class="awful">
                     Martha Jones
-                </ul>
-                <ul class="meh" >
+                </li>
+                <li id="awful" >
                     That Agatha Christie Episode
-                </ul>
-                <ul class="awful">
+                </li>
+                <li class="awful">
                     Martha Jones again
-                </ul>
-            </li>
+                </li>
+            <ul>
     <div>
 </body>
 
