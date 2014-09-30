@@ -8,8 +8,21 @@
         {
             $('li').css('font-size', '20px');
             $('p, li, h1').css('background-color', 'rgba(0, 128, 0, 0.35)');
-            var head = $('h1').html();
-            alert(head);
+            $('h1').click(function ()
+                {
+                    $(this).css('background-color','yellow');
+                });
+            $('p').click(function ()
+                {
+                    $(this).css('font-size','18px');
+                });
+            $('li').hover(function ()
+                {
+                    $(this).css('background-color', 'red');
+                },function ()
+                {
+                    $(this).css('background-color', 'white');
+                });
         });
     </script>
 </head>

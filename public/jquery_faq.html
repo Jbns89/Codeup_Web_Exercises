@@ -45,7 +45,7 @@
             $('#hide').click(function(event) 
             {
                 event.preventDefault();
-                $('dd').toggle('invisible');
+                $('dd').fadeToggle(1500);
             });
             
             $('ul').each(function (index) 
@@ -55,8 +55,26 @@
             
             $('h3').click(function()
             {
-                $('ul').toggle();
+                $('ul').slideToggle(1500, function()
+                    {
+                        console.log('I run when the slide function finishes')
+                    });
             });
+            
+            
+            $( "#clickme" ).click(function() 
+            {
+              $( "#book" ).animate(
+              {
+                opacity: 0.25,
+                left: "+=50",
+                height: "toggle"
+              }, 5000, function() {
+                // Animation complete.
+              });
+            });
+            
+            
         });
         
     </script>
@@ -121,6 +139,12 @@
         <li>Don't feed the flying monkeys</li>
         <li>Don't pop bubbles, they could be good witches</li>
     </ul>
+    
+    <div id="clickme">
+      Click here
+    </div>
+    <img id="book" src="img/04threadless_image.jpg" alt="" width="100%" height="100%"
+      style="position: relative; left: 10px;">
         
 </body>
 </html>
