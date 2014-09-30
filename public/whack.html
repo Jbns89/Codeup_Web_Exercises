@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>I'm so so sorry</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('img').click(function()
+            {
+                $('img').slideToggle(2000, function() 
+                    {
+                        $('h2').html("I'm sorry, I'm so so sorry....");
+                        $('h2').css('color', 'blue');
+                        
+                    }); 
+                
+            });
+            
+              
+        });
+    </script>
+</head>
+<body>
+    <img src="/img/davidTennant.jpg" alt="Picture of sad David Tennant">
+    <h2></h2>
+</body>
+</html>
