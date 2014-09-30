@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>National Park FAQ</title>
+    <style>
+    
+        dl{
+            text-align: center;
+        }
+    
+        a{
+            color:green;
+            text-decoration: none;
+        }
+    
+        .invisible{
+            display:none;
+        }
+        
+        dt{
+            margin: 2%;
+            font-size:1.1em;
+            font-weight:bold;
+        }
+        
+        dd{
+            margin:1%;
+            margin-left:4%;
+            font-size: 1em;
+        }
+        
+        
+        span{
+            font-size:.6em;
+        }
+
+        
+    </style>
+    
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <script>
+    
+        $('document').ready(function() 
+        {
+            $('#hide').click(function(event) 
+            {
+                event.preventDefault();
+                $('dd').toggle('invisible');
+            });
+            
+            $('ul').each(function (index) 
+            {
+                $(this).children().first().css('font-weight', 'bold');
+            });
+            
+            $('h3').click(function()
+            {
+                $('ul').toggle();
+            });
+        });
+        
+    </script>
+    
+</head>
+<body>
+    <h1>National Park F<span>requently </span>A<span>sked </span>Q<span>uestions </span></h1>
+    <a href="#" id="hide">Click here to toggle answers</a>
+    <dl>
+        <dt>Can I visit the dog park?</dt>
+        <dd class="invisible">The secret police have told us no one of any species is to enter, look at or think too long about the dog park.</dd>
+        
+        <dt>Are we safe from dinosaurs?</dt>
+        <dd class="invisible">If you are referring to Pteradons, those are not dinosaurs, just winged reptiles that lived 70 million years after pterodactyls.</dd>
+        
+        <dt>What's with the heavy pesticide spray?</dt>
+        <dd class="invisible">We've been spraying pesticide in all public park areas, and in neighborhoods with dense foliage and predominantly Irish heritage. We're making a strong effort to reduce the mosquito population, and the dangerous diseases that they carry....nothing else.</dd>
+        
+        <dt>Will you guys be open on holidays?</dt>
+        <dd class="invisible">"No. On holidays, make sure you have adequate emergency supplies and plenty of clear plastic sheeting. Holidays vary, so have all possible antidotes on hand."</dd>
+        
+        <dt>I've been noticing a lot of spiders. Are you addressing the proplem?</dt>
+        <dd class="invisible">There’s a real tarantula problem here. Many residents have called in to report that illiteracy, unwanted pregnancy, and violent crime are on the rise in the tarantula communities. Animal control is addressing these concerns through after school programs called ‘Teach a Spider to Read. Stop the Madness.’ Those interesting in volunteering should stand in their bathtubs and weep until it is all gone. Nothing left. You can let go now. Let go. Shhhh. Let go."</dd>
+        
+        <dt>Why is there an animal in the bathroom?</dt>
+        <dd class="invisible">There <em>is</em> a cat hovering in the men’s bathroom at the radio station here. He seems perfectly happy and healthy, but he’s floating about four feet off the ground, next to the sink. Doesn’t seem to be able to move from his current hover spot. If you pet him, he purrs, and he’ll rub on your body like a normal cat if you get close enough. Fortunately, because he’s right by the sink, it was pretty easy to leave him some water and food where he could get it, and it’s nice to have a station pet. Wish it wasn’t trapped in a hovering prison in the men’s bathroom, but listen: no pet is perfect. It becomes perfect when you learn to accept it for what it is.</dd>
+        
+        <dt>When will the drawbridge be finished?</dt>
+        <dd class="invisible">The drawbridge construction site has been hit by graffiti vandals. The Sheriff’s Secret Police suspect the feral dog pack to be responsible for the giant spray painted lettering along the scaffolding that reads “Gold Standard is Our Standard” and “Read Your Constitution”. There was also an elaborately painted portrait of Alexander Hamilton wearing Groucho Marx nose glasses and a caption that reads “Federalist Papers”, but where “Federalist” is crossed out and “Toilet” is written in red. Actually you should see this, its truly stunning. All that with spray paint. I’m impressed.</dd>
+        
+        <dt>What should I do if I encounter a snale?</dt>
+        <dd class="invisible">I think the best way to die would be swallowed by a giant snake. Going feet first and whole into a slimy maw would give your life perfect symmetry.</dd>
+        
+        <dt>Can we pet the rabbits?</dt>
+        <dd class="invisible">Rabbits are not what they seem to be....</dd>
+        
+        <dt>What's with the glowing cloud?</dt>
+        <dd class="invisible">We may never fully understand, or, understand at all what the Glow Cloud was and why it dumped dead animal on our park.</dd>
+        
+    </dl>
+    
+    <h3 class="lists">The Wasteland</h3>
+    <ul>
+        <li>It's hot</li>
+        <li>There's tons of radiation</li>
+        <li>Watch out for radscorpions</li>
+        <li>Mutants are mean</li>
+    </ul>
+    
+    <h3 class="lists">Bedrock</h3>
+    <ul>
+        <li>Dinosaurs are useful</li>
+        <li>Everyone must wear dresses</li>
+        <li>Seashells are money</li>
+        <li>Very low fuel prices</li>
+    </ul>
+    
+    <h3 class="lists">Oz</h3>
+    <ul>
+        <li>Munchkins are not children</li>
+        <li>Trees are mean</li>
+        <li>Don't feed the flying monkeys</li>
+        <li>Don't pop bubbles, they could be good witches</li>
+    </ul>
+        
+</body>
+</html>
