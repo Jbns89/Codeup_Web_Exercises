@@ -1,32 +1,126 @@
 <html>
 <head>
-    <title>I'm so so sorry</title>
-    <style>
-        h2{
-            text-align: center;
-        }
-    </style>
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/whack.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
+    
         $(document).ready(function()
         {
-            $('img').click(function()
+            
+            var gridnum;
+            var score = 0;
+            var timer = 30; 
+ 
+            var intervalId = setInterval(function () 
             {
-                $('img').slideToggle(2000, function() 
-                    {
-                        $('h2').html("I'm sorry, I'm so so sorry....");
-                        $('h2').css('color', 'blue');
-                        
-                    }); 
+                timer--;
+                $(".timer").html('Time: ' + timer);
+         
+                if (timer == 0) 
+                {
+                    $("#bbtheme").trigger("play");
+                    clearInterval(intervalId);
+                    $(".title").css('text-align', 'center');
+                    $(".score").text('You punched ' + score + ' of the Bradys!').css('text-align', 'center');
+                    $('.grid').hide();
+                    $(".timer").hide();
+                }
+            }, 1000);
+            
+            $('.brady').hide();
+            
+            setInterval(function() 
+            {
+                gridnum = '#' + (Math.ceil(Math.random()*9) + 1);
+                ('gridnum');
+
+                $(gridnum).fadeIn(500, function()
+                {
+                    $(gridnum).fadeOut();
+                });
+            }, 1000);
+            
+            $(".brady").click(function()
+            {
+                score+=1;
+                $(".score").text('Score: ' + score);
+                $(gridnum).hide();
+                
+                //Split works similar to explode() except if it is
+                //given an "" as a seperator it will split between each
+                //character as opposed to explode() which returns false
+                
+                //this is grabbing the id attribute of each anchor tag
+                var linkId = $(this).parent('a').attr('id');
+                
+                //Using split, we are seperating what comes before and after
+                //the dash mark into an array
+                var linkIdSplit = linkId.split("-");
+                
+                //this is grabbing the second item in the array
+                //and concatonating it onto the id hashtag so it knows
+                //which audio file to play
+                $("#" + linkIdSplit[1]).trigger("play");
                 
             });
-            
-              
         });
+    
     </script>
+
 </head>
 <body>
-    <img src="/img/davidTennant.jpg" alt="Picture of sad David Tennant">
-    <h2></h2>
+    <div class="container">
+        <h1 class="title">The Brady Punch</h1>
+        <audio class="audio-player" id="bbtheme" src="img/themesong.mp3"></audio>
+        <audio class="audio-player" id="marcia" src="img/ohmynose.mp3"></audio>
+        <audio class="audio-player" id="jan" src="img/marmarmar.mp3"></audio>
+        <audio class="audio-player" id="bobby"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbfink.wav"></audio>
+        <audio class="audio-player" id="mom"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbdosomething.wav"></audio>
+        <audio class="audio-player" id="alice"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbcatapillers.wav"></audio>
+        <audio class="audio-player" id="dad"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbmcarol.wav"></audio>
+        <audio class="audio-player" id="peter"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbpstupid.wav"></audio>
+        <audio class="audio-player" id="cindy"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbstopthat.wav"></audio>
+        <audio class="audio-player" id="greg"src="http://www.bradybunchshrine.com/bradybunch/Sounds1/bbsupercreep.wav"></audio>
+        <h3 class="score"></h3>
+        <h4 class="timer"></h4>
+        <div class="grid">
+            <a id = "play-marcia" href="#"><img id="1" class="brady" src="/img/marciaBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-mom" href="#"><img id="2" class="brady" src="/img/momBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-greg" href="#"><img id="3" class="brady" src="/img/gregBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-jan" href="#"><img id="4" class="brady" src="/img/janBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-alice" href="#"><img id="5" class="brady" src="/img/aliceBrady.jpg" width="149px" height="149px">
+        </div>
+        
+        <div class="grid">
+            <a id = "play-peter" href="#"><img id="6" class="brady" src="/img/peterBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-cindy" href="#"><img id="7" class="brady" src="/img/cindyBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-dad" href="#"><img id="8" class="brady" src="/img/dadBrady.jpg" width="149px" height="149px"></a>
+        </div>
+        
+        <div class="grid">
+            <a id = "play-bobby" href="#"><img id="9" class="brady" src="/img/bobbyBrady.jpg" width="149px" height="149px"></a>
+        </div>
+    </div>
 </body>
 </html>
