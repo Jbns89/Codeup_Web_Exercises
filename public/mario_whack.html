@@ -1,0 +1,154 @@
+<html>
+<head>
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mario_whack.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+    
+        $(document).ready(function()
+        {
+            var mario_party = [
+            "/img/mario/bowser.png",
+            "/img/mario/mario.png",
+            "/img/mario/yoshi.png",
+            "/img/mario/luigi.png",
+            "/img/mario/bowser.png",
+            "/img/mario/mario.png",
+            "/img/mario/yoshi.png",
+            "/img/mario/luigi.png",
+            "/img/mario/mario_8bit.png"
+            ];
+
+            var gridnum;
+            var mario_index;
+            var mario_character;
+            var score = 0;
+            var timer = 20; 
+
+            $('.mario_die').hide()
+            $('#end_game').hide();
+
+
+            $(".timer").html(timer);
+
+
+            $('.game_container').css('background-image','url(/img/mario/mario_start_screen.png)');
+
+            $("#mario_theme").trigger("play");
+                
+            
+            $('.start_game').click(function()
+            {
+                $("#mario_theme").trigger("pause");
+                $("#starman").trigger("play");
+                
+                $(this).hide();
+                
+                $('.game_container').css('background-image','url(/img/mario/mario_background.png)');
+                
+                var time_start = setInterval(function () {
+                    timer--;
+                    $(".timer").html(timer);
+
+                        
+
+                    if (timer == 3) {
+                        $("#starman").trigger("pause");
+                        $("#time_up").trigger("play");
+                    }
+
+                    if (timer == 0) {
+                        $("#game_over").trigger("play");
+                        
+                        $('#end_game').fadeIn(2000);
+                        $('#mario_die').fadeIn(1000);
+                        
+                        $('.score').text(score);
+                        $('.play_again').show();
+                        $('.grid').hide();
+                        
+                        clearInterval(time_start);
+                        clearInterval(gameplay);
+                    }
+                }, 1000);
+
+
+                var gameplay = setInterval(function() {
+                    gridnum = '#mario-' + (Math.ceil(Math.random()*6));
+                    
+                    mario_index = (Math.floor(Math.random()*10));
+                    
+                    mario_character = mario_party[mario_index];
+                    
+                    var image_path = "url(" + mario_character + ")";
+                    
+                    $(gridnum).css( "background-image", image_path);
+
+                    $(gridnum).fadeIn(700, function()
+                    {
+                        $(gridnum).fadeOut(500);
+                    });
+                }, 1000);
+                
+                $(".mario").click(function()
+                {
+                    if (mario_index == 8 ) {
+                        score+=5;
+                        $("#1up").trigger("play");
+                    } else {
+                        score+=1;
+                        $("#coin").trigger("play");
+                    }
+                    $(gridnum).hide();
+                    $(".score").text(score);
+                    
+                });
+            });
+ 
+        });
+    
+    </script>
+<style type="text/css">
+    div{
+        color:white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="mario-header">
+            <div class="score">0</div>
+            <div class="timer"></div>
+        </div>
+        
+        <div class="game_container">
+            <audio id="starman" src="/sounds/starman.mp3"></audio>
+            <audio id="mario_theme" src="http://www.talkingwav.com/mario_zelda/mario_08.wav"></audio>
+            <audio id="game_over" src="http://themushroomkingdom.net/sounds/wav/smb/smb_gameover.wav"></audio>
+            <audio id="time_up" src="http://themushroomkingdom.net/sounds/wav/smb/smb_warning.wav"></audio>
+            <audio id="coin" src="http://themushroomkingdom.net/sounds/wav/smb/smb_coin.wav"></audio>
+            <audio id="1up" src="http://themushroomkingdom.net/sounds/wav/smb/smb_1-up.wav"></audio>
+            
+            <button class="start_game"></button>
+            <div id="end_game">
+                <div id="mario_die"></div>
+            </div>
+            
+            
+            <div id="mario-1" class="mario"></div>
+            
+            <div id="mario-2" class="mario"></div>
+            
+            <div id="mario-3" class="mario"></div>
+            
+            <div id="mario-4" class="mario"></div>
+            
+            <div id="mario-5" class="mario"></div>
+            
+            <div id="mario-6" class="mario"></div>
+        </div>
+    </div>
+</body>
+</html>
