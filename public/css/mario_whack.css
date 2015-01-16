@@ -1,0 +1,144 @@
+@font-face {
+    font-family: mario;
+    src: url(/deluxefont/dlxfont.ttf);
+}
+
+body{
+    font-family: mario;
+    background-color:black;
+}
+
+
+.game_container {
+    position:relative;
+    width: 800px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: url(/img/mario/mushroom.gif) 16 16, default;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 10%;
+}
+
+.timer{
+    font-size: xx-large;
+    color: white;
+    position:absolute;
+    font-weight: bolder;
+    top: 42%;
+    left: 85%;
+    height: 30px;
+    width: 30px;
+}
+
+.score{
+    color: white;
+    position:absolute;
+    top: 42%;
+    left: 40%;
+    font-size: xx-large;
+    font-weight: bolder;
+    height: 30px;
+    width: 30px;
+}
+
+#mario-1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 34%;
+    right: 67%;
+    background-size: 100px 100px;
+    /*background-color:red;*/
+}
+
+#mario-2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    right: 54.5%;
+    background-size: 100px 100px;
+    /*background-color:red;*/
+}
+
+#mario-3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 54%;
+    right: 33.5%;
+    background-size: 100px 100px;
+    /*background-color:red;*/
+}
+
+#mario-4{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 23%;
+    right: 20.5%;
+    background-size: 100px 100px;
+    /*background-color:red;*/
+}
+
+#mario-5{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 64%;
+    right: 10.3%;
+    background-size: 100px 100px;
+    /*background-color:red;*/
+}
+
+#mario-6{
+    position: absolute;
+    top: 45%;
+    right: .2%;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    /*background-color:red;*/
+} 
+
+#end_game{
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/mario/gameover.png");
+    background-repeat: no-repeat;
+    background-size: 800px 500px;
+}
+
+.mario-header{
+    margin-top:3%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/img/mario/mario_title.png);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 900px;
+    height: 100px;
+}
+
+.start_game{
+    margin-top: 45%;
+    margin-left: 30%;
+    width: 330px;
+    height: 30px;
+    border: none;
+    cursor: url(/img/mario/mario_star.png) 25 24, auto;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+#mario_die {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:66%;
+    right: 48%;
+    background-image: url('/img/mario/mario_die.png');
+    background-size: 50px 50px;
+}
