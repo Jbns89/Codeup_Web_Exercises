@@ -1,0 +1,91 @@
+body {
+    font-family: 'Amatic SC', cursive;
+    background-image: url(/img/landscapes.jpeg);
+    font-family: 'Rancho', cursive;
+    color: white;
+}
+
+h1 {
+    font-size: -webkit-xxx-large;
+    font-style: italic;
+    border-bottom: 2px solid white;
+}
+
+h2 {
+    text-align: -webkit-center;
+    font-size: -webkit-xxx-large;
+    background-color: rgba(0, 0, 205, 0.4);
+    border-radius: 100%;
+    width: 100%;    
+}
+
+table {
+    border: 4px double mediumblue;
+    float: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    text-align: center;
+}
+
+th {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.57);
+    font-size: xx-large;
+    font-family: 'Walter Turncoat', cursive;
+    
+}
+
+label {
+    font-size: xx-large;
+}
+
+td {
+    background-color: rgba(254, 255, 250, 0.56);
+    padding: 15px;
+    border-top: rgba(0, 0, 0, 0.9) dotted 2px;
+    border-right: rgba(0, 0, 0, 0.9) dotted 2px;
+    font-size: x-large;
+    font-family: 'Patrick Hand', cursive;
+
+}
+
+.buttons {
+    color: white;
+    font-size: x-large;
+    padding: .7%;
+    border-radius: 15%;
+    border: 1px solid white;
+    text-decoration: none;
+    
+}
+
+.left {
+    margin-top: -2.7%;
+}
+
+.right {
+    text-align: right;
+}
+
+.input_area {
+    text-align: center;
+}
+
+.input_tag {
+    padding-right: 2%;
+}
+
+button {
+    width: 30%;
+    padding: .5%;
+    margin-left: 35%;
+    border-radius: 30px;
+    font-weight: 700;
+    color: black;
+    background-color: rgba(240, 255, 255, 0.46);
+    font-size: medium;
+    font-family: 'Walter Turncoat', cursive;
+}
+
+

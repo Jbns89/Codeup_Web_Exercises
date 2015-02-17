@@ -1,0 +1,33 @@
+body
+{
+    background-image: url(/img/birdies-blue.jpg);
+}
+.navbar-default 
+{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#BEC7BA),to(#BEC7BA));
+}
+.navbar>.container .navbar-brand-centered, .navbar>.container-fluid .navbar-brand-centered>a:hover 
+{
+    margin-left: -80px;
+    background-color: #F7F7F7;
+    color: #BEC7BA;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus 
+{
+    color: #FFC85D;
+    background-color: #FFFFFF;
+}
+.navbar-default .navbar-nav>li>a 
+{
+    color: #FFFFFF;
+    font-family: monospace;
+    font-size: large;
+    font-weight: 800;
+}
+.blogSpace{
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(214, 223, 252, 0.74);
+}
+

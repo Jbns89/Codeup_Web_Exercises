@@ -1,0 +1,14 @@
+.jumbotron {
+padding: 30px;
+margin-bottom: 30px;
+color: rgb(255, 255, 255);
+background-color: #F9C4C4;
+width: 75%;
+border-radius: 100px;
+}
+
+.container .jumbotron {
+border-radius: 100px;
+border: rgb(255, 137, 253) dotted 5px;
+}
+
