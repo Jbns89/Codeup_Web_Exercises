@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Disarm the BOM (Browser Object Model)</title>
+</head>
+<body>
+    <h1>Mission Impossible!</h1>
+    <button id="btnDisarm">Disarm the BOM!</button>
+    <script>
+ 
+    var detonationTimer = 10; // seconds
+ 
+    var intervalId = setInterval(function () {
+        
+        detonationTimer--;
+ 
+        alert(detonationTimer + '...');
+ 
+        if (detonationTimer == 0) {
+            alert('BOMMMMM!!!');
+            clearInterval(intervalId);
+        }
+ 
+    }, 1000);
+ 
+    var btnDisarm = document.getElementById('btnDisarm');
+ 
+    btnDisarm.addEventListener('click', function () {
+        clearInterval(intervalId);
+        alert('You are a hero! You disarmed the BOM!');
+    });
+ 
+    </script>
+</body>
+</html>
