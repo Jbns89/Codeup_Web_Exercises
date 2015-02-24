@@ -1,32 +1,29 @@
 <html>
 <head>
     <title>Delayed Autosave</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
     <h2>Autosaving Text Input</h2>
     <textarea rows="10" cols="60" id="important"></textarea>
     <script>
+        var delay;
         var timeoutId;
         
-        function save() 
-        {
+        function save() {
             alert('Saved!');
         }
-
-        function autosave() 
-        {
-            //delay time is set out in miliseconds
-            var delay = 5000;
+        
+        function autosave() {
             clearTimeout(timeoutId);
-            //this timeout id is pulling from the global variable
-            //not creating a local one.
-            //Also save is treated like a variable
-            //so the () is not needed afterwards because
-            //we don't want to call the function immediately
+            delay = 2000;
             timeoutId = setTimeout(save, delay);
         }
+        
         var textarea = document.getElementById('important');
         textarea.addEventListener('keyup', autosave, false);
+
+
     </script>
 </body>
 </html>

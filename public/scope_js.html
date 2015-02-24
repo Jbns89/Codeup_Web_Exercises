@@ -19,12 +19,26 @@
             var random = Math.floor((Math.random()*100)+1);
             function isOdd(num)
             {
-                number=(num%2==0)?console.log("Your number is even."):console.log("Your number is odd.");
+                number = ( num % 2 == 0)?console.log("The number " + num + " is even."):console.log("The number " + num + " is odd.");
             }
             isOdd(random);
         }()); 
         </script>
+        <style type="text/css">
+          body {
+            text-align: center;
+          }
+        </style>
     </head>
     <body>
+        <div class="container">
+            <h1>Scope Exercise</h1>
+            <h3>Using Self Invoking functions</h3>
+            <div class="container">
+                <p>In this exercise we created two self invoking functions. 
+                One would console out a name and the other would pick a 
+                random number and then console out whether it was odd or even.</p>
+            </div>
+        </div>
     </body>
 </html>

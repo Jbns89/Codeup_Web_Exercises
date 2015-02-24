@@ -27,22 +27,25 @@
     <button id="par">Par.</button>
     <script>
         // todo: get the main header element by id
-        document.getElementById('MainH1').addEventListener('click', function(){
+        document.getElementById('MainH1').addEventListener('click', function(e){
             var mainHeader = document.getElementById("main-header");
+            console.log(mainHeader.innerHTML);
             mainHeader.innerHTML = "JavaScript is the <em>bees knees!</em>";
             console.log(mainHeader.innerHTML);
         });
         // todo: set inner html of mainHeader to "JavaScript is Cool"
         // todo: get the sub header element by id
-        document.getElementById('SubH2').addEventListener('click', function(){
+        document.getElementById('SubH2').addEventListener('click', function(e){
             var subHeader = document.getElementById("sub-header");
             subHeader.style['color'] = 'blue';
             console.log(subHeader.style['color']);
         });
         // todo: set the text color of subHeader to blue
         // todo: get all list items
-        document.getElementById("lists").addEventListener('click', function(){
+        document.getElementById("lists").addEventListener('click', function(e){
             var listItems = document.getElementsByTagName('li');
+            
+            
             for (var i = 0; i < listItems.length; i+=2) {
                 if (listItems[i].attributes['data-dbid'].value == 1) {
                     listItems[i].style['color'] = 'blue';
@@ -54,12 +57,13 @@
         // todo: set text color on every other list item to grey
         // todo: set text color of li with dbid = 1 to blue
         // todo: get all elements with class name sub-paragraph
-        document.getElementById("par").addEventListener('click', function(){
+        document.getElementById("par").addEventListener('click', function(e){
             var subParagraphs = document.getElementsByClassName('sub-paragraph');
             subParagraphs[0].innerHTML = "Mission Accomplished!";
             console.log(subParagraphs[0].innerHTML);
         });
         // todo: change the text in the first sub paragraph to "Mission Accomplished!"
     </script>
+</script>
 </body>
 </html>

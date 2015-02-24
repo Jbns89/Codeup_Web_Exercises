@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>My Calculator</title>
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+        <style type="text/css">
+            
+            .calculator{
+                width: 50%;
+                height: 50%;
+                margin-top: 70px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: -webkit-center;
+            }
+        
+        </style>
+        
+    
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <div class="row">
+                    <input class="disabled" id="left-operand" placeholder="0000" readonly>
+                    <input class="disabled" id="operand" placeholder="+" readonly>
+                    <input class="disabled" id="right-operand" placeholder="0000" readonly>
+                </div>
+                <div class="row">
+                    <button class="col-md-3 number" value="1">1</button>
+                    <button class="col-md-3 number" value="2">2</button>
+                    <button class="col-md-3 number" value="3">3</button>
+                    <button class="col-md-3 oper" value="+">+</button>
+                </div>
+                <div class="row">
+                    <button class="col-md-3 number" value="4">4</button>
+                    <button class="col-md-3 number" value="5">5</button>
+                    <button class="col-md-3 number" value="6">6</button>
+                    <button class="col-md-3 oper" value="-">-</button>
+                </div>
+                <div class="row">
+                    <button class="col-md-3 number" value="7">7</button>
+                    <button class="col-md-3 number" value="8">8</button>
+                    <button class="col-md-3 number" value="9">9</button>
+                    <button class="col-md-3 oper" value="*">*</button>
+                </div>
+                <div class="row">
+                    <button class="col-md-3" id="clear">C</button>
+                    <button class="col-md-3 number" value="0">0</button>
+                    <button class="col-md-3" id="equal" value="=">=</button>
+                    <button class="col-md-3 oper" value="/">/</button>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        
+            $(document).ready(function(){
+                $(".number").click(function(){
+                    var number = $(this).attr('value');
+                    console.log(number);
+                    $("#left-operand").val(number);
+                });
+                $(".oper").click(function(){
+                    var operator = $(this).attr('value');
+                    $("#operand").val(operator);
+                });
+            });
+        
+        </script>
+        
+    </body>
+</html>
