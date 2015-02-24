@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>I'm so so sorry</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        
+        #hide{
+            display:none;
+        }
+        
+        img.center{
+            display: block;
+            margin-left: auto;
+            margin-right: 0%;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('img').click(function()
+            {
+                $('img').fadeOut(2000, function() 
+                    {
+                        $('#hide').delay(2000).fadeIn(2000,function()
+                        {
+                            $('#hide').css('diplay','inline');
+                            $('h2').html("I'm sorry, I'm so so sorry....");
+                            $('h2').css('color', 'blue');
+                        });
+                            
+                    }); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <img class="center" src="/img/davidTennant.jpg" alt="Picture of sad David Tennant" width="55%" height="55%">
+    <img id="hide" class="center" src="/img/roseDoomsday.jpg" width="50%" height="50%">
+    <h2></h2>
+
+</body>
+</html>

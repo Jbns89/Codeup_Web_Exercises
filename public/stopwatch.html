@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stop Watch</title>
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css">
+        <script src="/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/stopwatch.css">
+        <link rel="stylesheet" href="whhg_font/css/whhg.css">
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div>
+        <h1>Stop Watch</h1>
+        
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+        
+        <p id="watchValue">0</p>
+    </div>
+    <script>
+        var time = 0;
+        var intervalId;
+        var startButton = document.getElementById("startButton");
+        var stopButton  = document.getElementById("stopButton");
+        var startEvent = function() 
+        {
+            time = 0;
+            intervalId = setInterval(function() 
+            {
+                time++;
+                document.getElementById("watchValue").innerText = (time / 10);
+            }, 100);
+            startButton.removeEventListener("click", startEvent);
+        };
+        startButton.addEventListener("click", startEvent);
+        stopButton.addEventListener("click", function() 
+        {
+            clearInterval(intervalId);
+            startButton.addEventListener("click", startEvent);
+        });
+    </script>
+</body>
+</html>
